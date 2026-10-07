@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-atribute-selector</title>
+    <style>
+
+        a[href]{
+            /* here below this is only href property */
+            background-color: brown;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-bottom: 50px;
+          
+        }
+        a[target="_blank"]{
+            /* here also atribute selector but property and value */
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            
+        }
+         a[target="_blank"]:hover{
+            background-color: rgb(1, 1, 128);
+        
+         }
+
+    
+         button[type~="js"]{
+            /* here also came the property and value but add some dill mark containing the spasifc word */
+         background-color: burlywood;
+         color: white;
+         font-size: 20px;
+         padding: 15px;
+         }
+
+         p[lang|="en-US"]{
+            background-color: chartreuse;
+            color: white;
+
+         }
+         p[lang|="US"]{
+            background-color: chartreuse;
+            color: white;
+         }
+         h1[class^="advanced"]{
+            color: white;
+            background-color: chocolate;
+            
+         }
+         h3[class$="algin"]{
+            background-color: crimson;
+            color: white;
+         }
+         h4[class*="ld"]{
+            /* based in this here it will come only one word it will apply */
+            background-color: darkmagenta;
+            color: white;
+         }
+    </style>
+</head>
+<body>
+    
+ <!-- i think i had token the idea about crm overall and so now i want to focus on css atribute selectors -->
+
+    <!-- here start the css seletors-->
+     <!-- atribute selector -->
+ 
+     <p>
+        <!-- here prpperty based design  -->
+        <a href="">Hello world</a></p>
+
+      <p>
+        <!-- here property and value with design -->
+        <a href="#" target="_blank">Click here</a></p>
+
+      <div>
+        <!-- here property and value but here containing with a sigle word -->
+        <button type="button js" name="login" >Click</button>
+      </div>
+
+      <div>
+        <!-- here hyphen based -->
+      <p lang="en-US">you can here i write this text with help of en-us</p>
+      <p lang="en-US">you can here i write this text with help of en-us</p>
+      <p lang="enUS">you can here i write this text with help of en-us</p>
+      </div>
+     
+      <!-- now here im gonna see the advanced attribute selecots -->
+    
+      <div>
+        <!-- class^="top" based on this attribute selectors only the particular word wants to in front not befor but here important if two words same in one line it will work -->
+      <h1 class="advanced-attri">Hello world 1 </h1>
+      <h1 class="advanced-second">Hello World 2 </h1>
+      <h1 class="advancedattri">Hello world  3</h1>
+      </div>
+     
+      <div>
+        <!-- this [class$="test"] based on always the world will come befor -->
+          <h3 class="text-algin">Hello world</h3>
+          <h3 class="number-algin">Hello world</h3>
+          <h3 class="textalgin">Hello world</h3>
+      </div>
+      
+
+      <!-- [class*="te"] based on this when it will find the last two word and it will apply -->
+
+      <div>
+        <!-- it dose not care about front or back word -->
+           <h4 class="Hello-world">Hello world based on *</h4>
+           <h4 class="morning-ld">Hello world based on *</h4>
+           <h4 class="eveningld">Hello world based on *</h4>
+      </div>
+
+      <!-- finnaly i got perfect result from this now i can work with this -->
+
+</body>
+</html>
